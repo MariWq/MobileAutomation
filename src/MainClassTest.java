@@ -20,4 +20,13 @@ public class MainClassTest extends MainClass{
             System.out.println("class_number no more than 45");
         }
     }
+
+    @Test
+    public void testGetClassString(){
+        if (getClassString().contains("hello") || getClassString().contains("Hello")){
+            System.out.println("String class_string is right");
+        }else{
+            System.out.println("String class_string is't right");
+        }
+    }
 }
