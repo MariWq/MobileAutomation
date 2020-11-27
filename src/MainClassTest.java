@@ -5,28 +5,18 @@ public class MainClassTest extends MainClass{
     @Test
     public void testGetLocalNumber(){
 
-        if (getLocalNumber() == 14) {
-            System.out.println("number is 14");
-        }else{
-            System.out.println("number is not equal to 14");
-        }
+        assert getLocalNumber() == 14 : "number isn't equal 14";;
     }
 
     @Test
     public void testGetClassNumber(){
-        if (getClassNumber() >= 45 ){
-            System.out.println("class_number more than 45");
-        }else{
-            System.out.println("class_number no more than 45");
-        }
+
+        assert getClassNumber() >= 45 : "number isn't more 45";
     }
 
     @Test
     public void testGetClassString(){
-        if (getClassString().contains("hello") || getClassString().contains("Hello")){
-            System.out.println("String class_string is right");
-        }else{
-            System.out.println("String class_string is't right");
-        }
+
+        assert (getClassString().contains("hello") || getClassString().contains("Hello")) : "string isn't have word Hello";;
     }
 }
